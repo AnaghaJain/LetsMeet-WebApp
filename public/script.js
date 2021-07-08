@@ -6,7 +6,7 @@ const videoFrame = document.getElementById("video-frame");
 const peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "443",
+  port: "4100",
 });
 
 const videoSelf = document.createElement("video");
@@ -176,4 +176,9 @@ const changeTheme = () => {
   $(".main-video-area").toggleClass("main-video-area-light");
   $(".main-right-area").toggleClass("main-right-area-light");
   $(".main-message-input-area").toggleClass("main-message-input-area-light ");
+  $(".navbar").toggleClass("navbar-light");
 };
+
+// const timerButton = () =>{ 
+//   $("timer").innerHTML = `Date()`;
+// }

@@ -10,13 +10,13 @@ body {
 }
 
 video {
-  height: 250px;
+  height: 242px;
   width: 320px;
   transform: scaleX(-1);
   flex-wrap: wrap;
   background: #2c2929;
   border: 3px solid rgb(70, 63, 63);
-  margin: 7px;
+  margin: 4px;
 }
 
 .main {
@@ -193,3 +193,31 @@ video {
   font-weight: bold;
   background-color: transparent;
 }
+
+.navbar{
+  display: flex;
+  flex-grow: 1;
+  flex: 0.01;
+  background:#201e1f;
+  color: #d2d2d2;
+  padding: 0px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.navbar-light{
+  display: flex;
+  flex-grow: 1;
+  flex: 0.01;
+  background:#474644;
+  padding: 0px;
+  color: #d2d2d2;
+  height: 50px;
+  font-size: 24px;
+}
+
+/* .timer{
+  background: transparent;
+  height: 50px;
+  font-size: 12px;
+} */
