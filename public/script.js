@@ -22,6 +22,8 @@ navigator.mediaDevices
   .then((stream) => {
     videoSelfStream = stream;
     setVideoStream(videoSelf, stream);
+    videoSelfStream.getVideoTracks()[0].enabled = false;
+    videoSelfStream.getAudioTracks()[0].enabled = false;
 
     peer.on("call", (call) => {
       call.answer(stream);
@@ -86,6 +88,43 @@ const connectNewUser = (userId, stream) => {
   });
 
   peers[userId] = call;
+};
+
+const startMeet = () => {
+  muteAndUnmute();
+  videoControls();
+  const viewbutton = `
+  <span>Stop Your Meet</span>
+  `;
+  if (document.querySelector(".startMeet").innerHTML === viewbutton) {
+    stopMeetButton();
+    setVideoButton();
+    videoSelfStream.getVideoTracks()[0].enabled = false;
+    setVideoButton();
+    videoSelfStream.getVideoTracks()[0].enabled = false;
+
+  } else {
+    document.querySelector(".startMeet").innerHTML = viewbutton;
+    setStopVideoButton();
+    videoSelfStream.getVideoTracks()[0].enabled = true;
+    setStopVideoButton();
+    videoSelfStream.getVideoTracks()[0].enabled = true;
+  }
+};
+
+const startMeetButton = () => {
+  const html = `
+    <span>Stop Your Meet</span>
+    `;
+
+  document.querySelector(".startMeet").innerHTML = html;
+};
+
+const stopMeetButton = () => {
+  const html = `
+      <span>Start Meeting</span>
+      `;
+  document.querySelector(".startMeet").innerHTML = html;
 };
 
 const setVideoStream = (video, stream) => {
@@ -179,10 +218,10 @@ const changeTheme = () => {
   $(".navbar").toggleClass("navbar-light");
 };
 
-// const timerButton = () =>{ 
+// const timerButton = () =>{
 //   $("timer").innerHTML = `Date()`;
 // }
 
-function collapseChat(){
-  $(".main-right-area").variable.style.display=none;
+function collapseChat() {
+  $(".main-right-area").variable.style.display = none;
 }

@@ -49,7 +49,11 @@
       <div class="main-left-area">
         <div class="navbar main-control-block">
           <span id="title">LetsMeet</span>
-          <!-- <button type="button" class="btn btn-info timer"></button> -->
+          <button type="button" class="btn btn-info">
+            <div class="startMeet" onclick="startMeet()">
+              <span>Start Meeting</span>
+            </div>
+          </button>
         </div>
         <div class="main-video-area">
           <div id="video-frame"></div>
@@ -60,15 +64,15 @@
               onclick="muteAndUnmute()"
               class="main-control-button main_mute"
             >
-              <em class="fas fa-microphone"></em>
-              <span>Mute</span>
+              <em class="unmute fas fa-microphone-slash"></em>
+              <span>Unmute</span>
             </div>
             <div
               onclick="videoControls()"
               class="main-control-button main_video"
             >
-              <em class="fas fa-video"></em>
-              <span>Stop Video</span>
+              <em class="stopVideo fas fa-video-slash"></em>
+              <span>Video</span>
             </div>
           </div>
           <div class="main-control-block">
