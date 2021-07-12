@@ -105,7 +105,7 @@ const toggleMeet = () => {
     audio.disabled = false;
     startmeetbtn.innerHTML = viewbuttonSTOP;
   } else {
-    videoSelfStream.getVideoTracks()[0].enabled = false;
+    videoSelfStream.getAudioTracks()[0].enabled = false;
     setUnmuteButton();
     videoSelfStream.getVideoTracks()[0].enabled = false;
     setVideoButton();
