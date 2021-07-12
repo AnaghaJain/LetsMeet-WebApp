@@ -6,7 +6,7 @@ const videoFrame = document.getElementById("video-frame");
 const peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "4100",
+  port: "443",
 });
 
 const videoSelf = document.createElement("video");
