@@ -6,7 +6,7 @@ const videoFrame = document.getElementById("video-frame");
 const peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "443",
+  port: "4100",
 });
 
 const videoSelf = document.createElement("video");
@@ -41,23 +41,23 @@ navigator.mediaDevices
       }, 1000);
       console.log("inside user connected");
     });
-
-    let text = $("input");
-    $("html").keydown(function (e) {
-      if (e.which == 13 && text.val().length !== 0) {
-        socket.emit("message", text.val());
-        text.val("");
-      }
-    });
-
-    socket.on("createMessage", (message) => {
-      console.log(text.val());
-      $(".messages-reflect-area").append(
-        `<li class="message"><b>User</b><br/>${message}</li>`
-      );
-      scrollingToBottom();
-    });
   });
+
+let text = $("input");
+$("html").keydown(function (e) {
+  if (e.which == 13 && text.val().length !== 0) {
+    socket.emit("message", text.val());
+    text.val("");
+  }
+});
+
+socket.on("createMessage", (message) => {
+  console.log(text.val());
+  $(".messages-reflect-area").append(
+    `<li class="message"><b>User</b><br/>${message}</li>`
+  );
+  scrollingToBottom();
+});
 
 socket.on("user-disconnected", (userId) => {
   if (peers[userId]) peers[userId].close();
