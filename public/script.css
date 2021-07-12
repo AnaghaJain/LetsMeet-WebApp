@@ -37,7 +37,27 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
+  flex-direction: column;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background:black; 
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background:rgb(54, 56, 58); 
+  }
 
 .main-video-area-light {
   flex-grow: 1;
@@ -46,6 +66,8 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
+  flex-direction: column;
 }
 
 .video-frame {

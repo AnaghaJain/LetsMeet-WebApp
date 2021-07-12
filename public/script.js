@@ -6,7 +6,7 @@ const videoFrame = document.getElementById("video-frame");
 const peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "443",
+  port: "4100",
 });
 
 const videoSelf = document.createElement("video");
@@ -90,26 +90,87 @@ const connectNewUser = (userId, stream) => {
   peers[userId] = call;
 };
 
+const toggleMeet = () => {
+  const video = document.querySelector(".main_video");
+  const audio = document.querySelector(".main_mute");
+  const startmeetbtn = document.querySelector(".startMeet");
+  const viewbuttonSTOP = `
+  <span>Stop Your Meet</span>
+  `;
+  const viewbuttonSTART = `
+  <span>Start Meeting</span>
+  `;
+  if (video.disabled) {
+    video.disabled = false;
+    audio.disabled = false;
+    startmeetbtn.innerHTML = viewbuttonSTOP;
+  } else {
+    video.disabled = true;
+    audio.disabled = true;
+    startmeetbtn.innerHTML = viewbuttonSTART;
+  }
+};
 const startMeet = () => {
-  muteAndUnmute();
-  videoControls();
+  // muteAndUnmute();
+  // videoControls();
+  // document.querySelector(".main_video").disabled = false;
   const viewbutton = `
   <span>Stop Your Meet</span>
   `;
   if (document.querySelector(".startMeet").innerHTML === viewbutton) {
-    stopMeetButton();
-    setVideoButton();
-    videoSelfStream.getVideoTracks()[0].enabled = false;
-    setVideoButton();
-    videoSelfStream.getVideoTracks()[0].enabled = false;
-
+    setControlsInactive();
+    document.querySelector(".main_video").disabled = true;
+    // setVideoButton();
+    // videoSelfStream.getVideoTracks()[0].enabled = false;
+    // setVideoButton();
+    // videoSelfStream.getVideoTracks()[0].enabled = false;
   } else {
-    document.querySelector(".startMeet").innerHTML = viewbutton;
-    setStopVideoButton();
-    videoSelfStream.getVideoTracks()[0].enabled = true;
-    setStopVideoButton();
-    videoSelfStream.getVideoTracks()[0].enabled = true;
+    setControlsActive();
+    document.querySelector(".main_video").disabled = false;
+    // setStopVideoButton();
+    // videoSelfStream.getVideoTracks()[0].enabled = true;
+    // setStopVideoButton();
+    // videoSelfStream.getVideoTracks()[0].enabled = true;
   }
+};
+
+const setControlsActive = () => {
+  const html = `<button
+  onclick="muteAndUnmute()"
+  class="main-control-button main_mute"
+>
+  <em class="unmute fas fa-microphone-slash"></em>
+  <span>Unmute</span>
+</button>
+<button
+  onclick="videoControls()"
+  class="main-control-button main_video"
+>
+  <em class="stopVideo fas fa-video-slash"></em>
+  <span>Video</span>
+</button>`;
+
+  document.querySelector(".controls").innerHTML = html;
+};
+
+const setControlsInactive = () => {
+  const html = `<button disabled
+  onclick="muteAndUnmute()"
+  class="main-control-button main_mute"
+>
+  <em class="unmute fas fa-microphone-slash"></em>
+  <span>Unmute</span>
+</button>
+
+<button disabled
+  onclick="videoControls()"
+  class="main-control-button main_video"
+>
+  <em class="stopVideo fas fa-video-slash"></em>
+  <span>Video</span>
+</button>`;
+
+  document.getElementById("#controls").innerHTML = html;
 };
 
 const startMeetButton = () => {
