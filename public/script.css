@@ -30,6 +30,25 @@ video {
   flex-direction: column;
 }
 
+.main_mute:disabled{
+  color: #838181;
+}
+
+.main_video:disabled{
+  color: #838181;
+}
+
+.main_video{
+  color: #d2d2d2;
+}
+
+.main_mute{
+  color: #d2d2d2;
+}
+
+.main_video{
+  color: #d2d2d2;
+}
 .main-video-area {
   flex-grow: 1;
   background: #201e1f;
