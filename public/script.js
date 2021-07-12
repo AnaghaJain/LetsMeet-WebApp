@@ -6,7 +6,7 @@ const videoFrame = document.getElementById("video-frame");
 const peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "443",
+  port: "4100",
 });
 
 const videoSelf = document.createElement("video");
@@ -105,6 +105,10 @@ const toggleMeet = () => {
     audio.disabled = false;
     startmeetbtn.innerHTML = viewbuttonSTOP;
   } else {
+    videoSelfStream.getVideoTracks()[0].enabled = false;
+    setUnmuteButton();
+    videoSelfStream.getVideoTracks()[0].enabled = false;
+    setVideoButton();
     video.disabled = true;
     audio.disabled = true;
     startmeetbtn.innerHTML = viewbuttonSTART;
