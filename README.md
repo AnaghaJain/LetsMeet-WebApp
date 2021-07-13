@@ -12,11 +12,11 @@ https://www.youtube.com/watch?v=mYLrhY36H0w
 # Features
 LetsMeet Features
 
-Rooms
+**Rooms**
 
 On joining the app, we are allotted a random room using uuidv4. It provides a random room number which is attached to the URL. It is important in a web app as it defines the room in which the other members would be able to join. It creates a unique URL ID for conducting a meet.
 
-Start and Stop Video
+**Start and Stop Video**
 
 On joining the app, our video and audio is disabled and even the control buttons are disabled. It is because the meet hasn’t started yet. To enter the video conference, you will have to click the start meet button and then play around with the audio-video controls as per your need.
 
@@ -25,7 +25,8 @@ Once you click on start meeting, the option is replaced by stop the meet. Stop t
 
 This feature gives the user the freedom to toggle around the meet while staying connected with friends and family via chat.
  
-Video
+**Video**
+
 The video is accessed by the app to access the video. The app asks you to grant the access for video and microphone access for video conferencing app experience.
 The video is in tile format which uses the peer connection. The device medias are being used and we are able to view our video on joining the room.
 
@@ -55,7 +56,7 @@ Features:
 
 •	Mirror formatted video for real-life view
 
-Mute
+**Mute**
 
 The audio is accessed by the app to access your microphone. When a connection is made with the peer the socket is emitted and we are able to hear the user’s audio.
 The mute button is on the bottom left corner with the video button. It is a toggle button to mute and unmute as per the user’s convenience.
@@ -72,7 +73,7 @@ Features:
 
 •	If the meet has not started it remains disabled.
 
-Chat Window
+**Chat Window**
 
 The chat window is on the right-hand side of the web app. It has a message area, message input area and an emoji handler.
 
@@ -96,27 +97,27 @@ Features:
 
 •	The scroll is formatted so that you view the newest messages (the last messages are viewed due to auto scroll)
 
-Emoji
+**Emoji**
 
 The emoji is a fun element added to the chat window. It is a small icon which on clicking copies the emoji on the textbox. 
 This is also sent to the chat window using the enter button. 
 
-Copy URL/Share Link
+**Copy URL/Share Link**
 
 To invite more member, you would require to send the entire URL to your friend using which he/she can join.
 The copy URL allows the user to copy the URL on the clipboard at the click of the button.
 
-Themes Change
+**Themes Change**
 
 Theme button is a very unique feature which allows you to explore a new theme on clicking.
 It is a toggle button which allows the user a eye soothing themes – either a light theme inducing a calming effect, and the default theme – which is the dark theme – which gives it a more professional, eye-soothing visual.
 
-Leave/Disconnect Users
+**Leave/Disconnect Users**
 
 The disconnect feature of the Video conferencing app is activated. When a user closes the tab to disconnect, the user is removed from the screen from other’s screen as well. Without this feature you get the frozen screen of the left user on the screen. 
 
 This is an important feature to establish proper connection between users. It is part of the necessary condition to establish a non-lagged connection.
 
-Participants
+**Participants**
 
 Video conferencing app is scalable and can be used together by multiple users. The scroll bar allows you to navigate and view all videos. 
