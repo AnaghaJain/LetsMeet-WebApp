@@ -10,7 +10,7 @@ User guide:
 https://www.youtube.com/watch?v=mYLrhY36H0w
 
 # Features
-LetsMeet Features
+**LetsMeet Features**
 
 **Rooms**
 
@@ -24,6 +24,7 @@ Meanwhile, the chat is working and allows you to chat with all the users in the 
 Once you click on start meeting, the option is replaced by stop the meet. Stop the meet disable the video and audio of the user and then disables the control buttons like it is in the beginning.
 
 This feature gives the user the freedom to toggle around the meet while staying connected with friends and family via chat.
+
  
 **Video**
 
@@ -56,6 +57,7 @@ Features:
 
 •	Mirror formatted video for real-life view
 
+
 **Mute**
 
 The audio is accessed by the app to access your microphone. When a connection is made with the peer the socket is emitted and we are able to hear the user’s audio.
@@ -72,6 +74,7 @@ Features:
 •	All users are accessible to this feature if the meet has started.
 
 •	If the meet has not started it remains disabled.
+
 
 **Chat Window**
 
@@ -97,20 +100,24 @@ Features:
 
 •	The scroll is formatted so that you view the newest messages (the last messages are viewed due to auto scroll)
 
+
 **Emoji**
 
 The emoji is a fun element added to the chat window. It is a small icon which on clicking copies the emoji on the textbox. 
 This is also sent to the chat window using the enter button. 
+
 
 **Copy URL/Share Link**
 
 To invite more member, you would require to send the entire URL to your friend using which he/she can join.
 The copy URL allows the user to copy the URL on the clipboard at the click of the button.
 
+
 **Themes Change**
 
 Theme button is a very unique feature which allows you to explore a new theme on clicking.
 It is a toggle button which allows the user a eye soothing themes – either a light theme inducing a calming effect, and the default theme – which is the dark theme – which gives it a more professional, eye-soothing visual.
+
 
 **Leave/Disconnect Users**
 
